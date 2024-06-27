@@ -1,4 +1,6 @@
+import {formatCurrency} from '../../utils/helpers'
 function MenuItem({ pizza }) {
+  // eslint-disable-next-line no-unused-vars
   const { id, name, unitPrice, ingredients, soldOut, imageUrl } = pizza;
 
   return (
