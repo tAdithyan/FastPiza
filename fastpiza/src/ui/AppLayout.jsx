@@ -5,7 +5,6 @@ import { Outlet, useNavigation } from 'react-router-dom'
 import Loader from './Loader'
 const AppLayout = () => {
   const isLoding = useNavigation()
-  console.log(isLoding);
   return (
     <div className='layout'>
       {isLoding.state==="loading" && <Loader/>}
