@@ -1,10 +1,14 @@
 import React from 'react'
 import Heder from './Heder'
 import CartOverview from '../features/cart/CartOverview'
-import { Outlet } from 'react-router-dom'
+import { Outlet, useNavigation } from 'react-router-dom'
+import Loader from './Loader'
 const AppLayout = () => {
+  const isLoding = useNavigation()
+  console.log(isLoding);
   return (
-    <div>
+    <div className='layout'>
+      {isLoding.state==="loading" && <Loader/>}
       <Heder/>
       <main>
         <Outlet/>
