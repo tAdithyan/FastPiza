@@ -1,14 +1,12 @@
-import { useNavigate, useRouteError } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 
 function NotFound() {
   const navigate = useNavigate();
-  const error = useRouteError()
- 
 
   return (
     <div>
-      <h1>Something went wrong 😢</h1>
-      <p>{error.statusText}</p>
+      <h1>404 Not Found 😢</h1>
+      <p>Oops! The page you are looking for does not exist.</p>
       <button onClick={() => navigate(-1)}>&larr; Go back</button>
     </div>
   );
